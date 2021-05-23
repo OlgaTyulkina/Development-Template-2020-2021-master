@@ -1,9 +1,28 @@
-#include <stdio.h>
-#include "add.h"
+#include <iostream>
+#include <locale.h>
 
-int main() {
-  printf("hello!\n");
-  printf("%d\n", add(1, 2));
+#include "Polynom.h"
 
-  return 0;
+using namespace std;
+
+int main()
+{
+	TMonom A(121, 5);
+	TMonom B(1214, 2);
+	cout << "Monom A = " << A << endl;
+	cout << "Monom B = " << B << endl;
+
+	TPolynom P(3);
+	P += A;
+	P += B;
+	cout << "\nPolynom P = A + B = " << P << endl;
+
+	TPolynom P2(P);
+	cout << "Polynom P2(P) = " << P2 << endl;
+
+	TPolynom P3(3);
+	P3 = P + P2;
+	cout << "\nPolynom P3 = P + P2 = " << P3 << endl;
+
+	return 0;
 }
