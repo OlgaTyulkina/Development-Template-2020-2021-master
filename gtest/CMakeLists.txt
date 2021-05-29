@@ -1,6 +1,6 @@
 set(target "gtest")
 create_project_lib(${target})
-
+ 
 #if((${CMAKE_CXX_COMPILER_ID} MATCHES "GNU" OR
 #    ${CMAKE_CXX_COMPILER_ID} MATCHES "Clang") AND
 #    (${CMAKE_SYSTEM_NAME} MATCHES "Linux"))
